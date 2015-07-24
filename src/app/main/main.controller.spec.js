@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('gcdi'));
+  beforeEach(module('wedding'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();

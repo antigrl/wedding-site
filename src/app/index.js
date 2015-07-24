@@ -1,6 +1,6 @@
 'use strict';
 
-var gcdiapp = angular.module('wedding', ['ui.router'])
+var app = angular.module('wedding', ['ui.router'])
 .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
 
