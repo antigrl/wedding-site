@@ -16,12 +16,6 @@ var wedding = angular.module('wedding', ['ui.router'])
     controller: 'WeddingCtrl'
   })
 
-  .state('rsvp', {
-    url: '/rsvp',
-    templateUrl: 'app/rsvp/rsvp.html',
-    controller: 'RsvpCtrl'
-  })
-
   .state('charity', {
     url: '/charity',
     templateUrl: 'app/charity/charity.html',
