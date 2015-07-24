@@ -1,0 +1,75 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon",
+"../../bower_components/neat/app/assets/stylesheets/neat",
+"../../bower_components/bitters/app/assets/stylesheets/base";
+
+@import "variables";
+@import "typography";
+@import "mediaqueries";
+@import "navbar";
+@import "hero";
+@import "maps";
+@import "footer";
+
+
+// Mixins
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body {
+  background-color: #ececec;
+  background: url("../assets/images/bg-pattern.jpg") repeat;
+  margin: 0;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  font-family: 'futura-pt', sans-serif;
+  color: #606060;
+}
+
+.grid-row {
+  @include outer-container;
+  .grid-cell {
+    @include span-columns(12);
+    @include media($tablet) {
+      @include span-columns(6);
+    }
+    @include media($desktop) {
+      @include span-columns(6);
+    }
+  }
+
+  .grid-single-cell {
+    @include span-columns(12);
+  }
+
+  .grid-third-cell {
+    @include span-columns(4);
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+
+  .grid-half-cell {
+    @include span-columns(6);
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
+  .grid-large-cell {
+    @include span-columns(8);
+  }
+
+  .last {
+    @include omega;
+  }
+}
+
+.jefferson-img {
+  @include span-columns(3);
+  @include shift(2);
+  text-align: right;
+}
