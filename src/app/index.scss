@@ -11,6 +11,12 @@
 @import "footer";
 
 
+$medium-screen: em(640);
+$large-screen: em(860);
+
+$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+$large-screen-up: new-breakpoint(min-width $large-screen 8);
+
 // Mixins
 @mixin vertical-align {
   position: relative;
@@ -28,6 +34,8 @@ body {
   transform-style: preserve-3d;
   font-family: 'futura-pt', sans-serif;
   color: #606060;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .grid-row {
@@ -72,4 +80,94 @@ body {
   @include span-columns(3);
   @include shift(2);
   text-align: right;
+}
+
+.container {
+  @include outer-container;
+  padding-top: 30px;
+  width: 1000px;
+
+
+  .top-heading {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+    padding: 20px 40px;
+    @include media($large-screen) {
+      @include span-columns(10);
+      @include shift(1);
+      @include omega;
+    }
+  }
+
+
+  article {
+    text-align: center !important;
+    padding: 0 10px;
+    @include media($large-screen) {
+      text-align: left;
+      @include span-columns(6);
+    }
+
+  }
+
+  h3 {
+    font-family: $serif;
+    font-weight: normal;
+    font-size: 1.6em;
+    color: #333;
+    text-align: left;
+    margin: 0;
+  }
+
+  .archreactor {
+    @include media($large-screen) {
+
+    }
+  }
+}
+
+// Wedding section
+.map-left {
+  margin-bottom: 30px;
+  float: left;
+  position: relative;
+  z-index: 3;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+}
+
+.ceremony-right,
+.hotel-left,
+.hotel-right {
+  float: left;
+}
+
+
+.hotel-left,
+.hotel-right {
+  @include span-columns(6);
+
+  .contain {
+    float: left;
+    width: 100%;
+    padding: 15px 0 25px 0;
+    position: relative;
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.hotel-right {
+  @include omega;
+}
+
+.half-text-left {
+  width: 220px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
 }

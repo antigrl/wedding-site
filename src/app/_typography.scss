@@ -1,3 +1,7 @@
+p {
+  margin: 0;
+}
+
 .location {
   text-align: center;
   h2 {
@@ -8,7 +12,7 @@
     color: #808080;
     margin-bottom: 0;
     font-weight: normal;
-    font-size: 1.8em;
+    font-size: 30px;
     &:before,
     &:after {
       content: ' ';
@@ -68,7 +72,9 @@
     width: 70px;
     text-align: right;
     margin-right: 1.2em;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    color: #333;
+    font-weight: normal;
   }
 
   dd {
@@ -81,9 +87,17 @@
 
 a {
   text-decoration: none;
-  font-weight: 600;
   color: inherit;
   &:hover {
     color: #000;
+  }
+}
+
+button,
+input[type=submit] {
+  margin-top: 20px;
+  background-color: #808080;
+  &:hover {
+    background-color: #000;
   }
 }
