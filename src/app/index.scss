@@ -86,7 +86,12 @@ body {
   @include outer-container;
   padding-top: 50px;
   width: 1000px;
-
+  @include media($tablet) {
+    width: 100%;
+  }
+   @include media($mobile) {
+    width: 100%;
+  }
 
   .top-heading {
     background-color: #fff;
@@ -144,6 +149,9 @@ body {
   padding: 5px;
   background-color: #fff;
   box-shadow: 0px 1px 7px rgba(0,0,0,0.2);
+  @include media($mobile) {
+    margin: 10px;
+  }
 }
 
 .ceremony-right,
@@ -156,15 +164,24 @@ body {
 .hotel-left,
 .hotel-right {
   @include span-columns(6);
+  @include media($mobile) {
+    width: 100%;
+  }
 
   .contain {
     float: left;
     width: 100%;
     padding: 15px 0 25px 0;
     position: relative;
-
+    @include media($mobile) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     img {
       margin-bottom: 10px;
+      @include media($mobile) {
+        width: 100%;
+      }
     }
   }
 }
@@ -178,4 +195,8 @@ body {
   float: left;
   margin-right: 20px;
   margin-top: 5px;
+  @include media($mobile) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

@@ -2,6 +2,10 @@
   background: url('../assets/images/hero.jpg') top center no-repeat;
   height: 800px;
   z-index: -1;
+  @include media($mobile) {
+    background-size: cover;
+    height: 400px;
+  }
   .overlay {
     display: table;
     background-color: rgba(0,0,0,0.3);
@@ -16,6 +20,9 @@
       color: #fff;
       font-family: $serif;
       letter-spacing: 1px;
+      @include media($mobile) {
+        left: 0;
+      }
       ul {
         display: inline-block;
         h1 {
@@ -24,12 +31,18 @@
           margin-bottom: 5px;
           text-shadow: 0 3px 5px rgba(0,0,0,0.4);
           line-height: 1.2em;
+          @include media($mobile) {
+            font-size: 2.5em;
+          }
         }
         h2 {
           font-weight: normal;
           font-size: 2.2em;
           line-height: 0;
           text-shadow: 0 3px 5px rgba(0,0,0,0.4);
+          @include media($mobile) {
+            font-size: 1.6em;
+          }
         }
         h3 {
           font-weight: 300;
@@ -38,6 +51,9 @@
           padding: 5px;
           font-size: 1em;
           text-transform: uppercase;
+          @include media($mobile) {
+            font-size: .85em;
+          }
         }
       }
 
